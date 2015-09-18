@@ -17,8 +17,8 @@ _XHProf_ needs to be installed and running on your system for this module to wor
 
 - Download this module, and place it in your Silverstripe root, calling it `xhprof`
 - Edit `/framework/main.php`, adding the following lines at the very top (under `<?php`), and at the very bottom:    
-`include "../xhprof/_includes/header.php";`    
-`include "../xhprof/_includes/footer.php";`
+`include "../../xhprof/_includes/header.php";`    
+`include "../../xhprof/_includes/footer.php";`
 - Now, when running your site, you should see a `Profiler output` link on the very bottom of your site
 
 ## Installing XHProf
