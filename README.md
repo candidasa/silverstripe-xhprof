@@ -13,6 +13,35 @@ _Would also work on older Silverstripe versions, but installation instructions n
 
 ## Installation
 
+useful guide: http://techportal.inviqa.com/2009/12/01/profiling-with-xhprof/
+
+git clone https://github.com/candidasa/silverstripe-xhprof.git xhprof
+cd xhprof
+% phpize
+% ./configure --with-php-config=<path to php-config>
+% make
+% make test
+% sudo make install
+
+Add to php.ini:
+[xhprof]
+extension=xhprof.so
+xhprof.output_dir=/path/to/sites/xhprof/runs
+
+Restart Apache
+
+Adding to main.php:
+include "../../xhprof/_includes/header.php";
+include "../../xhprof/_includes/footer.php";
+
+install graphviz
+which dot
+sudo ln -s /opt/local/bin/dot /usr/local/bin/dot
+
+
+http://localhost/?xhprof=1
+
+
 _XHProf_ needs to be installed and running on your system for this module to work. Once _XHPprof_ has been installed, follow the following steps:
 
 - Download this module, and place it in your Silverstripe root, calling it `xhprof`
